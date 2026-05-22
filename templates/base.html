@@ -118,6 +118,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
 <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
 <script src="{% static 'js/blobax.js' %}"></script>
+<script>
+/* After logout, browser "Back" must not show cached logged-in page */
+window.addEventListener('pageshow', function (e) {
+  if (e.persisted) window.location.reload();
+});
+</script>
 {% block scripts %}{% endblock %}
 </body>
 </html>
