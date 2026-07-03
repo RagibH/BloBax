@@ -9,3 +9,11 @@ db.sqlite3
 node_modules/
 media/
 staticfiles/
+
+# ML model weights (add locally; too large for git)
+*.pth
+*.onnx
+
+# Local source spreadsheets
+Class_names_medicine.xlsx
+Class_Names_List.docx

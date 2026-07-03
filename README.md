@@ -2,6 +2,8 @@
 
 Django web app for health predictions, emergency guidance (Gemini), and doctor directory.
 
+Repository: [github.com/RagibH/BloBax](https://github.com/RagibH/BloBax)
+
 ## Setup
 
 ```bash
