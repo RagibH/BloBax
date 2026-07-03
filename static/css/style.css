@@ -10,7 +10,7 @@
     --bx-pastel: #b8f0e4;
     --bx-pastel-soft: rgba(184, 240, 228, 0.1);
     --bx-offwhite: #f5f3ef;
-    --bx-cream-soft: rgba(245, 243, 239, 0.06);
+    --bx-cream-soft: rgba(245, 243, 239, 0.1);
     --bx-text: #e2e8f0;
     --bx-muted: #94a3b8;
     --bx-border: rgba(0, 212, 170, 0.12);
@@ -461,8 +461,8 @@ body.bx-body select {
 .bx-input, .form-control, .form-select, .bx-auth-card input, .bx-auth-card textarea {
     width: 100%;
     box-sizing: border-box;
-    background: rgba(245, 243, 239, 0.07) !important;
-    border: 1px solid rgba(245, 243, 239, 0.14) !important;
+    background: rgba(245, 243, 239, 0.1) !important;
+    border: 1px solid rgba(245, 243, 239, 0.18) !important;
     color: var(--bx-offwhite) !important;
     border-radius: 12px !important;
     padding: 0.7rem 1rem !important;
@@ -750,8 +750,8 @@ body.bx-body select {
 .bx-pred-form-icon--liver { background: rgba(245, 158, 11, 0.15); color: #fbbf24; }
 
 .bx-form-card {
-    background: linear-gradient(160deg, rgba(245, 243, 239, 0.06), rgba(13, 17, 23, 0.94));
-    border: 1px solid rgba(245, 243, 239, 0.12);
+    background: linear-gradient(160deg, rgba(245, 243, 239, 0.09), rgba(13, 17, 23, 0.94));
+    border: 1px solid rgba(245, 243, 239, 0.16);
     border-radius: var(--bx-radius-lg);
     padding: 1.75rem;
     backdrop-filter: blur(20px);
