@@ -1322,6 +1322,43 @@ body.bx-body select {
   font-size: 0.72rem;
   color: var(--bx-muted);
 }
+
+.bx-footer-crafted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(245, 243, 239, 0.08);
+}
+
+.bx-footer-crafted-text {
+  font-size: 0.78rem;
+  color: rgba(245, 243, 239, 0.65);
+  letter-spacing: 0.02em;
+}
+
+.bx-footer-crafted-link {
+  display: inline-flex;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.bx-footer-crafted-link:hover {
+  transform: translateY(-2px);
+}
+
+.bx-footer-crafted-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(0, 212, 170, 0.45);
+  box-shadow: 0 0 18px rgba(0, 212, 170, 0.2);
+  background: rgba(245, 243, 239, 0.08);
+}
+
 @media (max-width: 768px) {
   .bx-footer-grid { grid-template-columns: 1fr 1fr; }
 }
