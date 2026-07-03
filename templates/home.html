@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}BloBax{% endblock %}
 {% block body_class %}bx-page-home{% endblock %}
 {% block preloader %}
 <div id="bx-preloader" class="bx-preloader">
     <div class="bx-preloader-panel" style="left:0;width:50%"></div>
     <div class="bx-preloader-panel" style="right:0;width:50%"></div>
     <div class="bx-preloader-inner">
-        <div class="bx-preloader-logo">Blobax</div>
+        <div class="bx-preloader-logo">BloBax</div>
         <div class="bx-preloader-bar-wrap">
             <div class="bx-preloader-bar"><div class="bx-preloader-fill"></div></div>
             <span class="bx-preloader-pct">0%</span>
@@ -17,6 +18,7 @@
 {% endblock %}
 {% block extra_css %}
 <link href="{% static 'css/hero-video.css' %}" rel="stylesheet">
+<link href="{% static 'css/landing.css' %}" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
@@ -35,11 +37,11 @@
     <div class="container bx-hero-video-inner">
         <div class="row align-items-center g-4 w-100">
             <div class="col-lg-8">
-                <p class="bx-hero-vid-eyebrow bx-reveal">AI Health Intelligence</p>
+                <p class="bx-hero-vid-eyebrow bx-reveal"><i class="fas fa-heart-pulse"></i> Your health companion</p>
                 <h1 class="bx-hero-vid-title bx-reveal">Know Your Health Before It Speaks</h1>
                 <p class="bx-hero-vid-desc bx-reveal">
-                    Blobax uses machine learning to detect diabetes, heart disease, and liver
-                    conditions early so you can act before symptoms do.
+                    BloBax uses machine learning to detect diabetes, heart disease, liver conditions,
+                    and identify medicines, so you can act before symptoms do.
                 </p>
                 <div class="bx-hero-vid-actions d-flex flex-wrap bx-reveal">
                     <a href="{% url 'predictions:home' %}" class="bx-btn bx-btn-primary">Start Health Check</a>
@@ -50,22 +52,65 @@
     </div>
 </section>
 
-<section id="about" class="bx-land-section position-relative">
-    <div class="bx-glow-orb" style="left:-80px;top:20%"></div>
+<div class="bx-marquee-strip" aria-hidden="true">
+    <div class="bx-marquee-track">
+        <span><i class="fas fa-circle"></i> ML Predictions</span>
+        <span><i class="fas fa-circle"></i> 317 Medicine Classes</span>
+        <span><i class="fas fa-circle"></i> Emergency AI</span>
+        <span><i class="fas fa-circle"></i> 400+ Doctors</span>
+        <span><i class="fas fa-circle"></i> Health Tracking</span>
+        <span><i class="fas fa-circle"></i> 5 Live AI Models</span>
+        <span><i class="fas fa-circle"></i> ML Predictions</span>
+        <span><i class="fas fa-circle"></i> 317 Medicine Classes</span>
+        <span><i class="fas fa-circle"></i> Emergency AI</span>
+        <span><i class="fas fa-circle"></i> 400+ Doctors</span>
+        <span><i class="fas fa-circle"></i> Health Tracking</span>
+        <span><i class="fas fa-circle"></i> 5 Live AI Models</span>
+    </div>
+</div>
+
+<section id="about" class="bx-land-section bx-section-pastel position-relative">
+    <div class="bx-land-deco bx-land-deco--1"></div>
     <div class="container position-relative">
         <div class="row align-items-center g-4">
             <div class="col-lg-5 bx-reveal position-relative text-center">
-                <div class="bx-orb-bg" style="width:300px;height:300px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(0,212,170,0.18) 0%,transparent 70%);pointer-events:none;border-radius:50%;"></div>
-                <img src="{% static 'images/blobax1.png' %}" class="bx-float-anim bx-glow-pulse-anim img-fluid rounded-4 position-relative" alt="Blobax" style="max-width:420px" onerror="this.style.display='none'">
+                <img src="{% static 'images/blobax1.png' %}" class="bx-float-anim bx-glow-pulse-anim img-fluid rounded-4 position-relative" alt="BloBax" style="max-width:420px" onerror="this.style.display='none'">
             </div>
             <div class="col-lg-7 bx-reveal">
                 <div class="bx-about-card">
-                    <p class="bx-eyebrow">About Blobax</p>
+                    <p class="bx-eyebrow">About BloBax</p>
                     <h2 class="bx-land-title">Healthcare AI with heart</h2>
-                    <p class="bx-lead">Blobax is built by <strong>Md. Ragib Hasan</strong>, a Computer Science and Engineering student at Sylhet Engineering College, passionate about real-world AI systems that actually help people.</p>
-                    <p class="bx-lead">Inspired by Big Hero 6, Blobax brings compassionate AI to everyday healthcare with ML-based disease prediction, emergency assistance, and health tracking in one place.</p>
+                    <p class="bx-lead">BloBax is built by <strong>Md. Ragib Hasan</strong>, a Computer Science and Engineering student at Sylhet Engineering College, passionate about real-world AI systems that actually help people.</p>
+                    <p class="bx-lead">Inspired by Big Hero 6, BloBax brings compassionate AI to everyday healthcare, ML disease prediction, medicine identification, emergency assistance, and health tracking in one platform.</p>
                     <a href="{% url 'users:register' %}" class="bx-btn bx-btn-primary">Create free account</a>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mission" class="bx-land-section bx-section-cream">
+    <div class="container">
+        <div class="text-center mb-4 bx-reveal">
+            <p class="bx-eyebrow">Our mission</p>
+            <h2 class="bx-land-title">Why we built BloBax</h2>
+            <p class="bx-lead mx-auto">Making preventive healthcare accessible to everyone in Bangladesh.</p>
+        </div>
+        <div class="bx-mission-grid bx-reveal">
+            <div class="bx-mission-card">
+                <i class="fas fa-shield-heart"></i>
+                <h5 class="fw-bold">Early Detection</h5>
+                <p class="small text-muted mb-0">Catch diabetes, heart, and liver risks before they become emergencies.</p>
+            </div>
+            <div class="bx-mission-card">
+                <i class="fas fa-hand-holding-medical"></i>
+                <h5 class="fw-bold">Accessible Care</h5>
+                <p class="small text-muted mb-0">Free tools anyone can use from a phone, no clinic visit required.</p>
+            </div>
+            <div class="bx-mission-card">
+                <i class="fas fa-lock"></i>
+                <h5 class="fw-bold">Private &amp; Secure</h5>
+                <p class="small text-muted mb-0">Your health data stays on your account. We never sell your information.</p>
             </div>
         </div>
     </div>
@@ -74,13 +119,13 @@
 <section id="features" class="bx-land-section bx-section-alt">
     <div class="container">
         <div class="text-center mb-4 bx-reveal">
-            <p class="bx-eyebrow">What Blobax can do</p>
+            <p class="bx-eyebrow">What BloBax can do</p>
             <h2 class="bx-land-title">Precision health tools</h2>
-            <p class="bx-lead mx-auto">Live ML models, emergency chat, doctor directory, and personal health tracking.</p>
+            <p class="bx-lead mx-auto">Live ML models, emergency chat, doctor directory, medicine AI, and personal health tracking.</p>
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-lg-4 bx-reveal">
-                <div class="bx-card h-100">
+                <div class="bx-card bx-card--pastel h-100">
                     <div class="bx-card-icon"><i class="fas fa-syringe"></i></div>
                     <h5 class="fw-bold">ML Predictions</h5>
                     <p class="small text-muted">Diabetes, heart &amp; liver risk. Random Forest &amp; XGBoost models.</p>
@@ -88,7 +133,15 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 bx-reveal">
-                <div class="bx-card h-100">
+                <div class="bx-card bx-card--pastel h-100">
+                    <div class="bx-card-icon"><i class="fas fa-pills"></i></div>
+                    <h5 class="fw-bold">Medicine AI</h5>
+                    <p class="small text-muted">Identify medicines from photos among 317 classes with MobileNetV2.</p>
+                    <span class="bx-badge-live">Live</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 bx-reveal">
+                <div class="bx-card bx-card--pastel h-100">
                     <div class="bx-card-icon"><i class="fas fa-comment-medical"></i></div>
                     <h5 class="fw-bold">Emergency AI</h5>
                     <p class="small text-muted">Gemini-powered chat for guidance and first aid.</p>
@@ -96,7 +149,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 bx-reveal">
-                <div class="bx-card h-100">
+                <div class="bx-card bx-card--pastel h-100">
                     <div class="bx-card-icon"><i class="fas fa-user-doctor"></i></div>
                     <h5 class="fw-bold">Doctor Directory</h5>
                     <p class="small text-muted">400+ verified providers across Bangladesh.</p>
@@ -104,7 +157,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 bx-reveal">
-                <div class="bx-card h-100">
+                <div class="bx-card bx-card--pastel h-100">
                     <div class="bx-card-icon"><i class="fas fa-weight-scale"></i></div>
                     <h5 class="fw-bold">BMI Calculator</h5>
                     <p class="small text-muted">Instant BMI with history in your report.</p>
@@ -112,26 +165,93 @@
                 </div>
             </div>
             <div class="col-md-6 col-lg-4 bx-reveal">
-                <div class="bx-card h-100">
+                <div class="bx-card bx-card--pastel h-100">
                     <div class="bx-card-icon"><i class="fas fa-heart-pulse"></i></div>
                     <h5 class="fw-bold">Health Tracking</h5>
                     <p class="small text-muted">Log BP, glucose, weight &amp; more. View trends on your profile.</p>
                     <span class="bx-badge-live">Live</span>
                 </div>
             </div>
-            <div class="col-md-6 col-lg-4 bx-reveal">
-                <div class="bx-card h-100">
-                    <div class="bx-card-icon"><i class="fas fa-file-prescription"></i></div>
-                    <h5 class="fw-bold">Prescription OCR</h5>
-                    <p class="small text-muted mb-0">Handwritten Rx reading. Coming soon.</p>
-                    <span class="bx-badge-ml">Soon</span>
+        </div>
+
+        <div class="text-center mt-5 mb-3 bx-reveal">
+            <p class="bx-eyebrow">Coming next</p>
+            <h3 class="h5" style="color:var(--bx-offwhite)">Upcoming models</h3>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-3 bx-reveal">
+                <div class="bx-card bx-pred-card--upcoming h-100 text-center p-4">
+                    <i class="fas fa-kidneys fa-lg mb-2" style="color:var(--bx-muted)"></i>
+                    <h6 class="fw-bold" style="color:var(--bx-muted)">Kidney Disease</h6>
+                    <span class="bx-badge-upcoming">Upcoming</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 bx-reveal">
+                <div class="bx-card bx-pred-card--upcoming h-100 text-center p-4">
+                    <i class="fas fa-hand-dots fa-lg mb-2" style="color:var(--bx-muted)"></i>
+                    <h6 class="fw-bold" style="color:var(--bx-muted)">Skin Disease</h6>
+                    <span class="bx-badge-upcoming">Upcoming</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 bx-reveal">
+                <div class="bx-card bx-pred-card--upcoming h-100 text-center p-4">
+                    <i class="fas fa-file-prescription fa-lg mb-2" style="color:var(--bx-muted)"></i>
+                    <h6 class="fw-bold" style="color:var(--bx-muted)">Prescription OCR</h6>
+                    <span class="bx-badge-upcoming">Upcoming</span>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 bx-reveal">
+                <div class="bx-card bx-pred-card--upcoming h-100 text-center p-4">
+                    <i class="fas fa-lungs fa-lg mb-2" style="color:var(--bx-muted)"></i>
+                    <h6 class="fw-bold" style="color:var(--bx-muted)">Lung Disease</h6>
+                    <span class="bx-badge-upcoming">Upcoming</span>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<section id="how" class="bx-land-section">
+<section id="why" class="bx-land-section bx-section-dark position-relative">
+    <div class="bx-land-deco bx-land-deco--2"></div>
+    <div class="container position-relative">
+        <div class="text-center mb-4 bx-reveal">
+            <p class="bx-eyebrow">Why choose BloBax</p>
+            <h2 class="bx-land-title">Built for real people</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-6 col-lg-3 bx-reveal">
+                <div class="bx-why-card">
+                    <div class="bx-why-icon"><i class="fas fa-bolt"></i></div>
+                    <h6 class="fw-bold">Instant Results</h6>
+                    <p class="small text-muted mb-0">Predictions in seconds, not days.</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 bx-reveal">
+                <div class="bx-why-card">
+                    <div class="bx-why-icon"><i class="fas fa-mobile-screen"></i></div>
+                    <h6 class="fw-bold">Mobile Ready</h6>
+                    <p class="small text-muted mb-0">Works on any phone or PC browser.</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 bx-reveal">
+                <div class="bx-why-card">
+                    <div class="bx-why-icon"><i class="fas fa-chart-line"></i></div>
+                    <h6 class="fw-bold">Track History</h6>
+                    <p class="small text-muted mb-0">All results saved to your health report.</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 bx-reveal">
+                <div class="bx-why-card">
+                    <div class="bx-why-icon"><i class="fas fa-flag"></i></div>
+                    <h6 class="fw-bold">Made in BD</h6>
+                    <p class="small text-muted mb-0">Designed for Bangladesh healthcare needs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="how" class="bx-land-section bx-section-pastel">
     <div class="container">
         <div class="text-center mb-5 bx-reveal">
             <p class="bx-eyebrow">How it works</p>
@@ -151,7 +271,7 @@
                     <span class="bx-how-num">02</span>
                     <div class="bx-card-icon mx-auto"><i class="fas fa-brain"></i></div>
                     <h5 class="fw-bold">Run AI Checks</h5>
-                    <p class="small text-muted mb-0">Use ML models for diabetes, heart &amp; liver prediction.</p>
+                    <p class="small text-muted mb-0">Use ML models for disease and medicine prediction.</p>
                 </div>
             </div>
             <div class="col-md-4 bx-reveal">
@@ -162,6 +282,24 @@
                     <p class="small text-muted mb-0">Monitor vitals and view trends on your private dashboard.</p>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<section id="tech" class="bx-land-section bx-section-cream">
+    <div class="container text-center bx-reveal">
+        <p class="bx-eyebrow">Technology</p>
+        <h2 class="bx-land-title mb-3">Powered by modern AI</h2>
+        <p class="bx-lead mx-auto mb-4">Django, PyTorch, scikit-learn, and Gemini, production-grade stack.</p>
+        <div class="bx-tech-pills">
+            <span class="bx-tech-pill">Django</span>
+            <span class="bx-tech-pill">PyTorch</span>
+            <span class="bx-tech-pill">MobileNetV2</span>
+            <span class="bx-tech-pill">XGBoost</span>
+            <span class="bx-tech-pill">Random Forest</span>
+            <span class="bx-tech-pill">Gemini AI</span>
+            <span class="bx-tech-pill">Bootstrap 5</span>
+            <span class="bx-tech-pill">GSAP</span>
         </div>
     </div>
 </section>
@@ -177,13 +315,40 @@
                 <div class="bx-stat-dark"><div class="val" data-counter="400" data-suffix="+">0</div><div class="lbl">Doctors</div></div>
             </div>
             <div class="col-6 col-lg-3 bx-reveal">
-                <div class="bx-stat-dark"><div class="val" data-counter="6">0</div><div class="lbl">Health tools</div></div>
+                <div class="bx-stat-dark"><div class="val" data-counter="317">0</div><div class="lbl">Medicines</div></div>
             </div>
             <div class="col-6 col-lg-3 bx-reveal">
-                <div class="bx-stat-dark"><div class="val" data-counter="24">0</div><div class="lbl">Hours AI support</div></div>
+                <div class="bx-stat-dark"><div class="val" data-counter="5">0</div><div class="lbl">Live models</div></div>
             </div>
             <div class="col-6 col-lg-3 bx-reveal">
                 <div class="bx-stat-dark"><div class="val" data-counter="100" data-suffix="%">0</div><div class="lbl">Data privacy</div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="bx-land-section bx-section-alt">
+    <div class="container">
+        <div class="text-center mb-4 bx-reveal">
+            <p class="bx-eyebrow">FAQ</p>
+            <h2 class="bx-land-title">Common questions</h2>
+        </div>
+        <div class="bx-faq-list bx-reveal">
+            <div class="bx-faq-item is-open">
+                <button type="button" class="bx-faq-q">Is BloBax a replacement for a doctor?<i class="fas fa-chevron-down"></i></button>
+                <div class="bx-faq-a">No. BloBax is an AI-assisted health tool for early insights. Always consult a qualified doctor for medical decisions.</div>
+            </div>
+            <div class="bx-faq-item">
+                <button type="button" class="bx-faq-q">Is my health data private?<i class="fas fa-chevron-down"></i></button>
+                <div class="bx-faq-a">Yes. Your predictions and health logs are tied to your account only. We do not sell or share your personal health data.</div>
+            </div>
+            <div class="bx-faq-item">
+                <button type="button" class="bx-faq-q">How accurate are the ML predictions?<i class="fas fa-chevron-down"></i></button>
+                <div class="bx-faq-a">Models are trained on clinical datasets and show probability scores. Higher confidence means stronger model agreement, not a diagnosis.</div>
+            </div>
+            <div class="bx-faq-item">
+                <button type="button" class="bx-faq-q">Is BloBax free to use?<i class="fas fa-chevron-down"></i></button>
+                <div class="bx-faq-a">Yes. Creating an account and using core health tools is free.</div>
             </div>
         </div>
     </div>
@@ -202,7 +367,7 @@
                 <p class="mb-2">BSC in Computer Science and Engineering · Sylhet Engineering College</p>
                 <p class="bx-muted-text">
                     Passionate about building real-world AI systems that improve lives.
-                    Blobax combines machine learning, Django, and modern UI design to deliver healthcare tools for Bangladesh.
+                    BloBax combines machine learning, Django, and modern UI design to deliver healthcare tools for Bangladesh.
                 </p>
                 <div class="bx-builder-links d-flex flex-wrap gap-2 mt-3">
                     <a href="https://ragibh.github.io/" target="_blank" rel="noopener" class="bx-btn bx-btn-outline btn-sm"><i class="fas fa-globe me-2"></i>Portfolio</a>
@@ -214,18 +379,59 @@
     </div>
 </section>
 
-<section id="contact" class="bx-land-section bx-section-alt">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 text-center bx-reveal">
-                <p class="bx-eyebrow">Get In Touch</p>
-                <h2 class="bx-land-title">Say Hello</h2>
-                <p class="bx-muted-text mb-4">Questions, feedback, or collaboration. Message goes to ragibhasan53@gmail.com.</p>
-            </div>
+<section class="bx-land-section bx-section-pastel">
+    <div class="container bx-reveal">
+        <div class="bx-cta-band-pro">
+            <h2 class="bx-land-title mb-2">Ready to take control of your health?</h2>
+            <p class="bx-muted-text mb-4">Join BloBax today, free, fast, and built for you.</p>
+            <a href="{% url 'users:register' %}" class="bx-btn bx-btn-primary me-2">Get Started Free</a>
+            <a href="{% url 'predictions:home' %}" class="bx-btn bx-btn-outline">Try Predictions</a>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-8 col-xl-7 bx-reveal">
-                <div class="bx-form-card bx-contact-form-card w-100">
+    </div>
+</section>
+
+<section id="contact" class="bx-land-section bx-section-cream">
+    <div class="container">
+        <div class="text-center mb-5 bx-reveal">
+            <p class="bx-eyebrow">Get In Touch</p>
+            <h2 class="bx-land-title">Say Hello</h2>
+            <p class="bx-muted-text">Questions, feedback, or collaboration, we'd love to hear from you.</p>
+        </div>
+
+        <div class="bx-contact-wrap">
+            <div class="bx-contact-info bx-reveal">
+                <div class="bx-contact-info-card">
+                    <span class="bx-contact-icon" aria-hidden="true"><i class="fas fa-envelope"></i></span>
+                    <div>
+                        <strong>Email</strong>
+                        <a href="mailto:ragibhasan53@gmail.com">ragibhasan53@gmail.com</a>
+                    </div>
+                </div>
+                <div class="bx-contact-info-card">
+                    <span class="bx-contact-icon" aria-hidden="true"><i class="fas fa-location-dot"></i></span>
+                    <div>
+                        <strong>Location</strong>
+                        <span>Sylhet, Bangladesh</span>
+                    </div>
+                </div>
+                <div class="bx-contact-info-card">
+                    <span class="bx-contact-icon" aria-hidden="true"><i class="fas fa-clock"></i></span>
+                    <div>
+                        <strong>Response time</strong>
+                        <span>Usually within 24 to 48 hours</span>
+                    </div>
+                </div>
+                <div class="bx-contact-info-card">
+                    <span class="bx-contact-icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+                    <div>
+                        <strong>Institution</strong>
+                        <span>Sylhet Engineering College</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bx-contact-form-side bx-reveal">
+                <div class="bx-form-card bx-contact-form-card">
                     {% if contact_sent %}
                     <div class="bx-contact-success text-center py-4">
                         <i class="fas fa-circle-check fa-2x mb-3" style="color:var(--bx-accent)"></i>
@@ -245,7 +451,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="bx-label">Subject</label>
-                            <input type="text" name="subject" class="bx-input" placeholder="e.g. Feedback on Blobax" required>
+                            <input type="text" name="subject" class="bx-input" placeholder="e.g. Feedback on BloBax" required>
                         </div>
                         <div class="mb-3">
                             <label class="bx-label">Message</label>
@@ -265,6 +471,7 @@
 
 {% block scripts %}
 <script src="{% static 'js/hero-video.js' %}"></script>
+<script src="{% static 'js/landing.js' %}"></script>
 {% if contact_sent %}
 <script>if (location.hash !== '#contact') location.hash = 'contact';</script>
 {% endif %}

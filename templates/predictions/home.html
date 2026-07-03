@@ -1,20 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Predictions — Blobax{% endblock %}
+{% block title %}Predictions | BloBax{% endblock %}
+{% block extra_css %}
+<link href="{% static 'css/pages-enhanced.css' %}" rel="stylesheet">
+{% endblock %}
 {% block content %}
 
-<section class="bx-section bx-predictions-hub bx-page">
-  <div class="container">
-    <div class="text-center mb-4 bx-reveal">
+<section class="bx-section bx-predictions-hub bx-page bx-page-enhanced">
+  <div class="bx-page-bg" aria-hidden="true"></div>
+  <div class="container position-relative">
+    <div class="text-center mb-5 bx-reveal">
       <p class="bx-eyebrow">Health Intelligence</p>
-      <h1 class="bx-title">AI Predictions</h1>
-      <p class="bx-muted-text">Run any of the models below. Results are saved to your private health report.</p>
+      <h1 class="bx-title bx-title-light">AI Predictions</h1>
+      <p class="bx-muted-text">Run live models below. Results save to your private health report.</p>
+      <div class="bx-live-pill"><span class="bx-pulse-dot"></span> 5 models live now</div>
     </div>
 
-    <div class="row g-4 justify-content-center">
+    <div class="bx-section-label bx-reveal"><i class="fas fa-circle-check"></i> Live Models</div>
+    <div class="row g-4 justify-content-center mb-5">
 
-      <div class="col-md-6 col-lg-5 bx-reveal">
-        <div class="bx-pred-card bx-pred-card--diabetes">
+      <div class="col-md-6 col-lg-4 bx-reveal">
+        <div class="bx-pred-card bx-pred-card--diabetes bx-pred-card--live">
           <div class="bx-pred-card__icon"><i class="fas fa-syringe"></i></div>
           <div class="bx-pred-card__badge bx-badge-live">LIVE</div>
           <h3>Diabetes Prediction</h3>
@@ -30,12 +36,12 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-5 bx-reveal">
-        <div class="bx-pred-card bx-pred-card--heart">
+      <div class="col-md-6 col-lg-4 bx-reveal">
+        <div class="bx-pred-card bx-pred-card--heart bx-pred-card--live">
           <div class="bx-pred-card__icon"><i class="fas fa-heart-pulse"></i></div>
           <div class="bx-pred-card__badge bx-badge-live">LIVE</div>
           <h3>Heart Disease Prediction</h3>
-          <p>Analyses 13 cardiology indicators — chest pain, ECG, cholesterol, exercise angina, and more.</p>
+          <p>Analyses 13 cardiology indicators: chest pain, ECG, cholesterol, exercise angina, and more.</p>
           <ul class="bx-pred-card__features">
             <li><i class="fas fa-check"></i> 13 clinical features</li>
             <li><i class="fas fa-check"></i> Ensemble classifier</li>
@@ -47,12 +53,12 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-5 bx-reveal">
-        <div class="bx-pred-card bx-pred-card--liver">
+      <div class="col-md-6 col-lg-4 bx-reveal">
+        <div class="bx-pred-card bx-pred-card--liver bx-pred-card--live">
           <div class="bx-pred-card__icon"><i class="fas fa-flask"></i></div>
           <div class="bx-pred-card__badge bx-badge-live">LIVE</div>
           <h3>Liver Disease Prediction</h3>
-          <p>Uses liver function markers — ALT, AST, bilirubin, albumin, protein — from blood test results.</p>
+          <p>Uses liver function markers: ALT, AST, bilirubin, albumin, protein from blood test results.</p>
           <ul class="bx-pred-card__features">
             <li><i class="fas fa-check"></i> 8 blood markers</li>
             <li><i class="fas fa-check"></i> XGBoost model</li>
@@ -64,10 +70,10 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-5 bx-reveal">
-        <div class="bx-pred-card bx-pred-card--bmi">
+      <div class="col-md-6 col-lg-4 bx-reveal">
+        <div class="bx-pred-card bx-pred-card--bmi bx-pred-card--live">
           <div class="bx-pred-card__icon"><i class="fas fa-weight-scale"></i></div>
-          <div class="bx-pred-card__badge bx-badge-ml">CALCULATOR</div>
+          <div class="bx-pred-card__badge bx-badge-live">LIVE</div>
           <h3>BMI Calculator</h3>
           <p>Body Mass Index from weight and height with WHO category classification.</p>
           <ul class="bx-pred-card__features">
@@ -75,29 +81,71 @@
             <li><i class="fas fa-check"></i> WHO categories</li>
             <li><i class="fas fa-check"></i> Saved to report</li>
           </ul>
-          <a href="{% url 'predictions:bmi' %}" class="bx-btn bx-btn-outline w-100 mt-3">
+          <a href="{% url 'predictions:bmi' %}" class="bx-btn bx-btn-primary w-100 mt-3">
             <i class="fas fa-calculator me-2"></i>Calculate BMI
           </a>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-5 bx-reveal">
-        <div class="bx-pred-card bx-pred-card--bmi opacity-75">
-          <div class="bx-pred-card__icon"><i class="fas fa-kidneys"></i></div>
-          <div class="bx-pred-card__badge bx-badge-ml">SOON</div>
-          <h3>Kidney Disease</h3>
-          <p class="mb-3">Model integration coming soon.</p>
-          <a href="{% url 'predictions:kidney' %}" class="bx-btn bx-btn-outline w-100 mt-auto">Details</a>
+      <div class="col-md-6 col-lg-4 bx-reveal">
+        <div class="bx-pred-card bx-pred-card--medicine bx-pred-card--live">
+          <div class="bx-pred-card__icon"><i class="fas fa-pills"></i></div>
+          <div class="bx-pred-card__badge bx-badge-live">LIVE</div>
+          <h3>Medicine Prediction</h3>
+          <p>Identify medicines from photos using MobileNetV2. Upload, crop, or capture live with your camera.</p>
+          <ul class="bx-pred-card__features">
+            <li><i class="fas fa-check"></i> 317 medicine classes</li>
+            <li><i class="fas fa-check"></i> Crop &amp; camera support</li>
+            <li><i class="fas fa-check"></i> Confidence score</li>
+          </ul>
+          <a href="{% url 'predictions:prescription' %}" class="bx-btn bx-btn-primary w-100 mt-3">
+            <i class="fas fa-play me-2"></i>Identify Medicine
+          </a>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-5 bx-reveal">
-        <div class="bx-pred-card bx-pred-card--bmi opacity-75">
+    </div>
+
+    <div class="bx-section-label bx-reveal bx-section-label--upcoming"><i class="fas fa-clock"></i> Upcoming Models</div>
+    <div class="row g-4 justify-content-center">
+
+      <div class="col-md-6 col-lg-4 bx-reveal">
+        <div class="bx-pred-card bx-pred-card--upcoming">
+          <div class="bx-pred-card__icon"><i class="fas fa-kidneys"></i></div>
+          <div class="bx-pred-card__badge bx-badge-upcoming">UPCOMING</div>
+          <h3>Kidney Disease</h3>
+          <p>Chronic kidney disease risk prediction from lab markers and clinical features.</p>
+          <a href="{% url 'predictions:kidney' %}" class="bx-btn bx-btn-outline w-100 mt-auto">Learn more</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 bx-reveal">
+        <div class="bx-pred-card bx-pred-card--upcoming">
+          <div class="bx-pred-card__icon"><i class="fas fa-hand-dots"></i></div>
+          <div class="bx-pred-card__badge bx-badge-upcoming">UPCOMING</div>
+          <h3>Skin Disease</h3>
+          <p>AI-powered skin condition analysis from dermatoscopic and clinical images.</p>
+          <a href="{% url 'predictions:skin' %}" class="bx-btn bx-btn-outline w-100 mt-auto">Learn more</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 bx-reveal">
+        <div class="bx-pred-card bx-pred-card--upcoming">
           <div class="bx-pred-card__icon"><i class="fas fa-file-prescription"></i></div>
-          <div class="bx-pred-card__badge bx-badge-ml">SOON</div>
+          <div class="bx-pred-card__badge bx-badge-upcoming">UPCOMING</div>
           <h3>Prescription OCR</h3>
-          <p class="mb-3">Handwritten prescription reading — coming soon.</p>
-          <a href="{% url 'predictions:prescription' %}" class="bx-btn bx-btn-outline w-100 mt-auto">Details</a>
+          <p>Read handwritten prescriptions and extract medicine names automatically.</p>
+          <a href="{% url 'predictions:prescription_ocr' %}" class="bx-btn bx-btn-outline w-100 mt-auto">Learn more</a>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 bx-reveal">
+        <div class="bx-pred-card bx-pred-card--upcoming">
+          <div class="bx-pred-card__icon"><i class="fas fa-lungs"></i></div>
+          <div class="bx-pred-card__badge bx-badge-upcoming">UPCOMING</div>
+          <h3>Lung Disease</h3>
+          <p>Respiratory condition screening using clinical and imaging-based ML models.</p>
+          <a href="{% url 'predictions:lung' %}" class="bx-btn bx-btn-outline w-100 mt-auto">Learn more</a>
         </div>
       </div>
 

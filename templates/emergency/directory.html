@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block body_class %}bx-page-directory{% endblock %}
-{% block title %}Doctor Directory — Blobax{% endblock %}
+{% block title %}Doctor Directory | BloBax{% endblock %}
 {% block extra_css %}
 <link href="{% static 'css/pages-directory.css' %}" rel="stylesheet">
 {% endblock %}
@@ -86,7 +86,7 @@
                 </div>
                 <span class="bx-dir-badge">Verified</span>
             </div>
-            <p class="bx-dir-card-meta"><i class="fas fa-stethoscope me-1"></i>{{ doctor.degree }} — {{ doctor.department }}</p>
+            <p class="bx-dir-card-meta"><i class="fas fa-stethoscope me-1"></i>{{ doctor.degree }}, {{ doctor.department }}</p>
             <p class="bx-dir-card-meta"><i class="fas fa-location-dot me-1"></i>{{ doctor.district }}, {{ doctor.division }}</p>
             {% if doctor.address %}
             <p class="bx-dir-card-meta text-truncate" title="{{ doctor.address }}"><i class="fas fa-hospital me-1"></i>{{ doctor.address|truncatechars:60 }}</p>
@@ -161,7 +161,7 @@ document.querySelectorAll('.view-doctor-btn').forEach(btn => {
                         </div>
                         <div class="col-md-6">
                             <p class="small mb-2"><span class="text-muted">Location</span><br>${data.division}, ${data.district}</p>
-                            <p class="small mb-2"><span class="text-muted">Address</span><br>${data.address || '—'}</p>
+                            <p class="small mb-2"><span class="text-muted">Address</span><br>${data.address || 'N/A'}</p>
                             <p class="small mb-0"><span class="text-muted">Phone</span><br><a href="tel:${data.contact_no}" style="color:var(--bx-accent)">${data.contact_no}</a></p>
                         </div>
                         <div class="col-12">

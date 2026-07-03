@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Diabetes Prediction — Blobax{% endblock %}
+{% block title %}Diabetes Prediction | BloBax{% endblock %}
 {% block content %}
 
-<section class="bx-section bx-pred-form-section bx-page">
-  <div class="container">
+<section class="bx-section bx-pred-form-section bx-page bx-page-enhanced">
+  <div class="bx-page-bg" aria-hidden="true"></div>
+  <div class="container position-relative">
     <div class="row justify-content-center">
       <div class="col-lg-7">
 
@@ -45,7 +46,7 @@
           </div>
           <p class="bx-result-disclaimer">
             <i class="fas fa-info-circle me-1"></i>
-            This is an AI prediction — not a medical diagnosis. Consult a doctor.
+            This is an AI prediction, not a medical diagnosis. Consult a doctor.
           </p>
         </div>
         {% endif %}

@@ -1,0 +1,72 @@
+/* Legal & static pages — BloBax theme */
+
+.bx-legal-page {
+    padding: 3rem 0 4rem;
+    position: relative;
+}
+.bx-legal-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 240px;
+    background: linear-gradient(180deg, var(--bx-pastel-soft), transparent);
+    pointer-events: none;
+}
+.bx-legal-hero {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+.bx-legal-hero .bx-legal-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: var(--bx-pastel-soft);
+    color: var(--bx-accent);
+    border: 1px solid var(--bx-border);
+}
+.bx-legal-card {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: var(--bx-radius-lg);
+    border: 1px solid var(--bx-border);
+    background: linear-gradient(160deg, rgba(245, 243, 239, 0.04), rgba(13, 17, 23, 0.92));
+    backdrop-filter: blur(14px);
+}
+.bx-legal-card h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--bx-offwhite);
+    margin: 2rem 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--bx-border);
+}
+.bx-legal-card h2:first-of-type { margin-top: 0; }
+.bx-legal-card p,
+.bx-legal-card li {
+    color: var(--bx-muted);
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+.bx-legal-card ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1rem;
+}
+.bx-legal-updated {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    color: var(--bx-muted);
+    background: var(--bx-pastel-soft);
+    border: 1px solid var(--bx-border);
+}

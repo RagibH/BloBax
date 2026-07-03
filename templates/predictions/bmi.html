@@ -1,10 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title %}BMI Calculator — Blobax{% endblock %}
+{% block title %}BMI Calculator | BloBax{% endblock %}
 
 {% block content %}
-<div class="bx-page">
-    <div class="container">
+<section class="bx-section bx-pred-form-section bx-page bx-page-enhanced">
+<div class="bx-page-bg" aria-hidden="true"></div>
+<div class="container position-relative">
         <div class="row justify-content-center">
             <div class="col-lg-8 bx-reveal">
                 <p class="bx-eyebrow"><a href="{% url 'predictions:home' %}" class="text-decoration-none">← Predictions</a></p>
@@ -56,5 +57,5 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 {% endblock %}

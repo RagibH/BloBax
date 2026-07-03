@@ -136,8 +136,8 @@
         document.body.classList.contains('bx-page-directory');
     if (hasLenis && !skipLenis) {
         lenis = new Lenis({
-            duration: 1.2,
-            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            duration: 1.65,
+            easing: (t) => 1 - Math.pow(1 - t, 4),
             smooth: true,
             smoothTouch: false,
         });
@@ -182,17 +182,17 @@
         gsap.utils.toArray('.bx-reveal').forEach((el, i) => {
             gsap.fromTo(
                 el,
-                { opacity: 0, y: 60, filter: 'blur(8px)' },
+                { opacity: 0, y: 36, filter: 'blur(6px)' },
                 {
                     opacity: 1,
                     y: 0,
                     filter: 'blur(0px)',
-                    duration: 0.9,
-                    delay: (i % 4) * 0.04,
-                    ease: 'power3.out',
+                    duration: 1.05,
+                    delay: (i % 5) * 0.05,
+                    ease: 'power2.out',
                     scrollTrigger: {
                         trigger: el,
-                        start: 'top 88%',
+                        start: 'top 90%',
                         toggleActions: 'play none none none',
                     },
                 }

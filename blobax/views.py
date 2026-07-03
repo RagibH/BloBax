@@ -17,7 +17,7 @@ def home(request):
         if sender_name and sender_email and subject and body:
             try:
                 send_mail(
-                    subject=f'[Blobax Contact] {subject}',
+                    subject=f'[BloBax Contact] {subject}',
                     message=f'From: {sender_name} <{sender_email}>\n\n{body}',
                     from_email=settings.DEFAULT_FROM_EMAIL,
                     recipient_list=[settings.CONTACT_RECIPIENT_EMAIL],
@@ -47,3 +47,11 @@ def contact_view(request):
     if request.method == 'POST':
         return home(request)
     return redirect(reverse('home') + '#contact')
+
+
+def privacy(request):
+    return render(request, 'pages/privacy.html')
+
+
+def terms(request):
+    return render(request, 'pages/terms.html')

@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
-{% block title %}Heart Disease Prediction — Blobax{% endblock %}
+{% block title %}Heart Disease Prediction | BloBax{% endblock %}
 {% block content %}
 
-<section class="bx-section bx-pred-form-section bx-page">
-  <div class="container">
+<section class="bx-section bx-pred-form-section bx-page bx-page-enhanced">
+  <div class="bx-page-bg" aria-hidden="true"></div>
+  <div class="container position-relative">
     <div class="row justify-content-center">
       <div class="col-lg-8">
 
@@ -32,7 +33,7 @@
               <span class="bx-prob-pct">{{ result.probability }}%</span>
             </div>
           </div>
-          <p class="bx-result-disclaimer"><i class="fas fa-info-circle me-1"></i>AI prediction only — not a diagnosis. See a cardiologist.</p>
+          <p class="bx-result-disclaimer"><i class="fas fa-info-circle me-1"></i>AI prediction only, not a diagnosis. See a cardiologist.</p>
         </div>
         {% endif %}
         {% if result.error %}<div class="alert alert-danger bx-reveal">{{ result.error }}</div>{% endif %}
@@ -92,12 +93,12 @@
               <div class="col-md-4">
                 <label class="bx-label" for="trestbps">Resting BP</label>
                 <input type="number" class="bx-input" name="trestbps" id="trestbps" min="80" max="250" required placeholder="120">
-                <small class="bx-field-help">mm Hg — normal ~120/80</small>
+                <small class="bx-field-help">mm Hg, normal ~120/80</small>
               </div>
               <div class="col-md-4">
                 <label class="bx-label" for="chol">Cholesterol</label>
                 <input type="number" class="bx-input" name="chol" id="chol" min="100" max="600" required placeholder="200">
-                <small class="bx-field-help">mg/dl — desirable &lt;200</small>
+                <small class="bx-field-help">mg/dl, desirable &lt;200</small>
               </div>
               <div class="col-md-4">
                 <label class="bx-label">Fasting BS &gt;120</label>

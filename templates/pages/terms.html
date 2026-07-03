@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Terms of Service | BloBax{% endblock %}
+{% block extra_css %}
+<link href="{% static 'css/pages-legal.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<section class="bx-legal-page bx-page">
+    <div class="container">
+        <div class="bx-legal-hero bx-reveal">
+            <div class="bx-legal-icon"><i class="fas fa-file-contract"></i></div>
+            <p class="bx-eyebrow">Legal</p>
+            <h1 class="bx-land-title">Terms of Service</h1>
+            <p class="bx-lead mx-auto">Rules and guidelines for using the BloBax platform.</p>
+        </div>
+
+        <div class="bx-legal-card bx-reveal">
+            <h2>Acceptance of terms</h2>
+            <p>By accessing or using BloBax, you agree to these Terms of Service. If you do not agree, please do not use the platform.</p>
+
+            <h2>Medical disclaimer</h2>
+            <p>BloBax provides AI-assisted health tools for informational purposes only. Predictions, medicine identification, and emergency chat are <strong>not</strong> medical diagnoses. Always consult a qualified healthcare professional for medical advice.</p>
+
+            <h2>Account responsibilities</h2>
+            <ul>
+                <li>You must provide accurate registration information.</li>
+                <li>You are responsible for keeping your login credentials secure.</li>
+                <li>You must not misuse the platform or attempt unauthorized access.</li>
+            </ul>
+
+            <h2>Acceptable use</h2>
+            <p>You agree not to use BloBax for illegal activities, to upload harmful content, or to interfere with the service's operation. Automated scraping or abuse of AI endpoints is prohibited.</p>
+
+            <h2>Intellectual property</h2>
+            <p>BloBax, its design, ML models, and content are owned by Md. Ragib Hasan unless otherwise stated. You may not copy or redistribute the platform without permission.</p>
+
+            <h2>Limitation of liability</h2>
+            <p>BloBax is provided "as is" without warranties. We are not liable for health decisions made based on AI outputs. Use the platform at your own discretion.</p>
+
+            <h2>Changes to terms</h2>
+            <p>We may update these terms from time to time. Continued use after changes constitutes acceptance of the updated terms.</p>
+
+            <h2>Contact</h2>
+            <p>Questions? Reach us at <a href="mailto:ragibhasan53@gmail.com" style="color:var(--bx-accent)">ragibhasan53@gmail.com</a>.</p>
+
+            <span class="bx-legal-updated">Last updated: July 2026</span>
+        </div>
+    </div>
+</section>
+{% endblock %}

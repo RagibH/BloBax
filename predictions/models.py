@@ -10,6 +10,7 @@ class PredictionHistory(models.Model):
         ('liver', 'Liver Disease Prediction'),
         ('kidney', 'Kidney Disease Prediction'),
         ('prescription', 'Prescription Recognition'),
+        ('medicine', 'Medicine Classification'),
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -28,6 +29,7 @@ class Prediction(models.Model):
         ('heart', 'Heart Disease'),
         ('liver', 'Liver Disease'),
         ('bmi', 'BMI'),
+        ('medicine', 'Medicine'),
     ]
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='predictions')
     prediction_type = models.CharField(max_length=20, choices=TYPES)

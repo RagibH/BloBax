@@ -1,0 +1,371 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Medicine Prediction | BloBax{% endblock %}
+
+
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css">
+
+<link rel="stylesheet" href="{% static 'css/medicine-prediction.css' %}">
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<section class="bx-section bx-med-section bx-page bx-page-enhanced">
+  <div class="bx-page-bg" aria-hidden="true"></div>
+
+  <div class="bx-med-bg" aria-hidden="true">
+
+    <div class="bx-med-orb bx-med-orb--1"></div>
+
+    <div class="bx-med-orb bx-med-orb--2"></div>
+
+    <div class="bx-med-grid"></div>
+
+  </div>
+
+
+
+  <div class="container position-relative">
+
+    <div class="row justify-content-center">
+
+      <div class="col-lg-9">
+
+
+
+        <div class="text-center mb-4 bx-med-hero bx-reveal">
+
+          <a href="{% url 'predictions:home' %}" class="bx-back-link">
+
+            <i class="fas fa-arrow-left me-2"></i>Back to Predictions
+
+          </a>
+
+          <div class="bx-med-hero-icon mx-auto mt-3">
+
+            <i class="fas fa-pills"></i>
+
+            <span class="bx-med-pulse"></span>
+
+            <span class="bx-med-pulse bx-med-pulse--2"></span>
+
+          </div>
+
+          <h1 class="bx-title mt-3">Medicine Prediction</h1>
+
+          <p class="bx-muted-text">Upload or capture a medicine strip, crop the area, and let AI identify it among <strong>317 medicines</strong>.</p>
+
+          <div class="bx-med-badges">
+
+            <span class="bx-med-badge"><i class="fas fa-brain"></i> MobileNetV2</span>
+
+            <span class="bx-med-badge"><i class="fas fa-expand"></i> 224×224</span>
+
+            <span class="bx-med-badge"><i class="fas fa-shield-halved"></i> No photo stored</span>
+
+          </div>
+
+        </div>
+
+
+
+        <div id="med-result-area"></div>
+
+
+
+        <div class="bx-med-card bx-reveal">
+
+          <div class="bx-med-tabs" role="tablist">
+
+            <button type="button" class="bx-med-tab active" data-mode="upload">
+
+              <i class="fas fa-cloud-arrow-up"></i>
+
+              <span>Upload Image</span>
+
+            </button>
+
+            <button type="button" class="bx-med-tab" data-mode="camera">
+
+              <i class="fas fa-camera"></i>
+
+              <span>Live Camera</span>
+
+            </button>
+
+          </div>
+
+
+
+          <div class="bx-med-panel" id="panel-upload">
+
+            <label class="bx-med-dropzone" id="med-dropzone" for="med-file-input">
+
+              <input type="file" id="med-file-input" accept="image/*" hidden>
+
+              <div class="bx-med-dropzone-inner">
+
+                <div class="bx-med-dropzone-icon">
+
+                  <i class="fas fa-image"></i>
+
+                </div>
+
+                <strong>Drop an image here</strong>
+
+                <span>or click to browse, JPG, PNG, WEBP</span>
+
+              </div>
+
+            </label>
+
+          </div>
+
+
+
+          <div class="bx-med-panel d-none" id="panel-camera">
+
+            <div class="bx-med-camera-wrap">
+
+              <video id="med-video" autoplay playsinline muted></video>
+
+              <div class="bx-med-camera-scan" aria-hidden="true"></div>
+
+              <canvas id="med-capture-canvas" hidden></canvas>
+
+              <div class="bx-med-camera-actions">
+
+                <button type="button" class="bx-btn bx-btn-outline" id="med-start-camera">
+
+                  <i class="fas fa-video me-2"></i>Start Camera
+
+                </button>
+
+                <button type="button" class="bx-btn bx-btn-primary d-none" id="med-snap-photo">
+
+                  <i class="fas fa-camera me-2"></i>Capture
+
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="bx-med-crop-section d-none" id="med-crop-section">
+
+            <div class="bx-med-crop-header">
+
+              <h6><i class="fas fa-crop-simple me-2"></i>Crop the medicine area</h6>
+
+              <p class="small bx-muted-text mb-0">Select only the medicine strip or tablet pack, not the full prescription.</p>
+
+            </div>
+
+            <div class="bx-med-crop-frame">
+
+              <img id="med-crop-image" alt="Crop preview">
+
+            </div>
+
+            <div class="bx-med-crop-actions">
+
+              <button type="button" class="bx-btn bx-btn-outline btn-sm" id="med-reset-crop">
+
+                <i class="fas fa-rotate-left me-1"></i>Reset
+
+              </button>
+
+              <button type="button" class="bx-btn bx-btn-outline btn-sm" id="med-change-image">
+
+                <i class="fas fa-image me-1"></i>Change Image
+
+              </button>
+
+            </div>
+
+          </div>
+
+
+
+          <div class="bx-med-preview d-none" id="med-preview-section">
+
+            <div class="bx-med-preview-label">
+
+              <i class="fas fa-check-circle"></i> Ready for prediction
+
+            </div>
+
+            <div class="bx-med-preview-frame">
+
+              <img id="med-preview-image" alt="Cropped preview">
+
+              <div class="bx-med-preview-scan" aria-hidden="true"></div>
+
+            </div>
+
+            <p class="small bx-muted-text mb-0">Optimized to 224×224 pixels</p>
+
+          </div>
+
+
+
+          <form id="med-predict-form" method="post" enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            <input type="file" name="cropped_image" id="med-cropped-input" hidden>
+
+            <div class="bx-med-actions">
+
+              <button type="submit" class="bx-btn bx-btn-primary bx-btn-predict" id="med-predict-btn" disabled>
+
+                <span class="bx-med-btn-text">
+
+                  <i class="fas fa-wand-magic-sparkles me-2"></i>Identify Medicine
+
+                </span>
+
+                <span class="bx-med-btn-loading d-none">
+
+                  <i class="fas fa-spinner fa-spin me-2"></i>Analyzing…
+
+                </span>
+
+              </button>
+
+            </div>
+
+          </form>
+
+        </div>
+
+
+
+        <div class="bx-med-steps bx-reveal">
+
+          <div class="bx-med-step" data-step="1">
+
+            <span class="bx-med-step-num">1</span>
+
+            <div>
+
+              <strong>Upload or capture</strong>
+
+              <small>Photo of medicine strip</small>
+
+            </div>
+
+          </div>
+
+          <div class="bx-med-step-line" aria-hidden="true"></div>
+
+          <div class="bx-med-step" data-step="2">
+
+            <span class="bx-med-step-num">2</span>
+
+            <div>
+
+              <strong>Crop medicine area</strong>
+
+              <small>Focus on the strip only</small>
+
+            </div>
+
+          </div>
+
+          <div class="bx-med-step-line" aria-hidden="true"></div>
+
+          <div class="bx-med-step" data-step="3">
+
+            <span class="bx-med-step-num">3</span>
+
+            <div>
+
+              <strong>AI identifies it</strong>
+
+              <small>Top matches with confidence</small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <p class="bx-med-disclaimer bx-reveal">
+
+          <i class="fas fa-info-circle me-1"></i>
+
+          AI-assisted identification only, not a substitute for a pharmacist or doctor. Results are saved to your health report (no photo stored).
+
+        </p>
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<div class="bx-med-scan-overlay d-none" id="med-scan-overlay">
+
+  <div class="bx-med-scan-inner">
+
+    <div class="bx-med-scan-visual">
+
+      <div class="bx-med-scan-ring"></div>
+
+      <div class="bx-med-scan-ring bx-med-scan-ring--2"></div>
+
+      <i class="fas fa-pills"></i>
+
+    </div>
+
+    <p class="bx-med-scan-text">Analyzing medicine…</p>
+
+    <div class="bx-med-scan-dots">
+
+      <span></span><span></span><span></span>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js"></script>
+
+<script src="{% static 'js/medicine-prediction.js' %}"></script>
+
+{% if result and not result.error %}
+
+{{ result|json_script:"med-init-result" }}
+
+{% endif %}
+
+{% endblock %}
+

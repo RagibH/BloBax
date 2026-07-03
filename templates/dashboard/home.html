@@ -1,19 +1,29 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Dashboard — Blobax{% endblock %}
+{% block title %}Dashboard | BloBax{% endblock %}
 {% block content %}
-<section class="bx-section bx-dash-section">
-<div class="container">
+<section class="bx-section bx-dash-section bx-page-enhanced">
+<div class="bx-page-bg" aria-hidden="true"></div>
+<div class="container position-relative">
 
   <div class="bx-dash-welcome bx-reveal">
     <div>
       <p class="bx-eyebrow">Health Dashboard</p>
-      <h1 class="bx-title h2">Welcome back, {{ user.first_name|default:user.username }}</h1>
+      <h1 class="bx-title bx-title-light h2">Welcome back, {{ user.first_name|default:user.username }}</h1>
       <p class="bx-muted-text">Here's your health activity overview.</p>
     </div>
     <a href="{% url 'predictions:home' %}" class="bx-btn bx-btn-primary">
       <i class="fas fa-plus me-2"></i>New Prediction
     </a>
+  </div>
+
+  <div class="bx-quick-actions bx-reveal">
+    <a href="{% url 'predictions:diabetes' %}" class="bx-quick-chip"><i class="fas fa-syringe"></i> Diabetes</a>
+    <a href="{% url 'predictions:heart' %}" class="bx-quick-chip"><i class="fas fa-heart-pulse"></i> Heart</a>
+    <a href="{% url 'predictions:liver' %}" class="bx-quick-chip"><i class="fas fa-flask"></i> Liver</a>
+    <a href="{% url 'predictions:bmi' %}" class="bx-quick-chip"><i class="fas fa-weight-scale"></i> BMI</a>
+    <a href="{% url 'predictions:prescription' %}" class="bx-quick-chip"><i class="fas fa-pills"></i> Medicine</a>
+    <a href="{% url 'users:profile' %}" class="bx-quick-chip"><i class="fas fa-file-medical"></i> Health Report</a>
   </div>
 
   <div class="row g-3 mb-4 bx-reveal">
@@ -76,7 +86,7 @@
           <td>
             <div class="bx-mini-bar-wrap">
               <div class="bx-mini-bar" style="--w:{{ p.probability|default:0 }}%"></div>
-              <span>{% if p.probability %}{{ p.probability|floatformat:0 }}%{% else %}—{% endif %}</span>
+              <span>{% if p.probability %}{{ p.probability|floatformat:0 }}%{% else %}N/A{% endif %}</span>
             </div>
           </td>
           <td class="text-muted small">{{ p.created_at|date:"M d, Y" }}</td>

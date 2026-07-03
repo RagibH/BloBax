@@ -10,5 +10,8 @@ urlpatterns = [
     path('liver/', views.liver_view, name='liver'),
     path('bmi/', views.bmi_prediction, name='bmi'),
     path('kidney/', views.kidney_prediction, name='kidney'),
+    path('skin/', views.skin_prediction, name='skin'),
+    path('prescription-ocr/', views.prescription_ocr_prediction, name='prescription_ocr'),
+    path('lung/', views.lung_prediction, name='lung'),
     path('prescription/', views.prescription_prediction, name='prescription'),
 ]

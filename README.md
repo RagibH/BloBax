@@ -1,4 +1,4 @@
-# Blobax — AI Health Assistant
+# BloBax
 
 Django web app for health predictions, emergency guidance (Gemini), and doctor directory.
 

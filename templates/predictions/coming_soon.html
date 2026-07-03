@@ -1,21 +1,26 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %}{{ title }} — Blobax{% endblock %}
+{% block title %}{{ title }} | BloBax{% endblock %}
+{% block extra_css %}
+<link href="{% static 'css/pages-enhanced.css' %}" rel="stylesheet">
+{% endblock %}
 
 {% block content %}
-<div class="bx-page">
-    <div class="container">
-        <div class="bx-coming-soon-hero bx-reveal">
-            <p class="bx-eyebrow"><a href="{% url 'predictions:home' %}" class="text-decoration-none">← Predictions</a></p>
-            <div class="icon-wrap"><i class="fas {{ icon }}"></i></div>
-            <h1 class="bx-title h3">{{ title }}</h1>
-            <p class="text-muted">{{ description }}</p>
-            <span class="bx-badge-ml mt-2 d-inline-block">ML model — integrate in predictions/views.py</span>
-            <div class="mt-4 d-flex gap-2 justify-content-center flex-wrap">
-                <a href="{% url 'predictions:bmi' %}" class="bx-btn bx-btn-primary">Use BMI (live)</a>
-                <a href="{% url 'predictions:home' %}" class="bx-btn bx-btn-outline">All predictions</a>
-            </div>
-        </div>
+<section class="bx-page bx-page-enhanced bx-pred-form-section">
+  <div class="bx-page-bg" aria-hidden="true"></div>
+  <div class="container position-relative">
+    <div class="bx-coming-soon-hero bx-reveal">
+      <p class="bx-eyebrow"><a href="{% url 'predictions:home' %}" class="text-decoration-none">← Predictions</a></p>
+      <div class="icon-wrap"><i class="fas {{ icon }}"></i></div>
+      <h1 class="bx-title h3">{{ title }}</h1>
+      <p class="bx-muted-text">{{ description }}</p>
+      <span class="bx-badge-upcoming mt-3 d-inline-block">UPCOMING MODEL</span>
+      <div class="mt-4 d-flex gap-2 justify-content-center flex-wrap">
+        <a href="{% url 'predictions:home' %}" class="bx-btn bx-btn-primary">View Live Models</a>
+        <a href="{% url 'predictions:bmi' %}" class="bx-btn bx-btn-outline">Try BMI Calculator</a>
+      </div>
     </div>
-</div>
+  </div>
+</section>
 {% endblock %}

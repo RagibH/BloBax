@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Health Report — Blobax{% endblock %}
+{% block title %}Health Report | BloBax{% endblock %}
 
 {% block content %}
 <section class="bx-section bx-profile-section bx-page">
@@ -52,7 +52,7 @@
                   stroke-dasharray="{% if health_score %}{{ health_score|floatformat:0 }} 251{% else %}0 251{% endif %}"
                   stroke-linecap="round" transform="rotate(-90 50 50)"/>
         </svg>
-        <div class="bx-score-num">{% if health_score is not None %}{{ health_score }}{% else %}—{% endif %}</div>
+        <div class="bx-score-num">{% if health_score is not None %}{{ health_score }}{% else %}N/A{% endif %}</div>
       </div>
       <div>
         <h6 class="fw-bold">Health Score</h6>
@@ -63,8 +63,8 @@
       <div class="col-md-4">
         <div class="bx-card h-100">
           <h6 class="fw-bold">Contact</h6>
-          <p class="small mb-1"><span class="text-muted">Phone</span><br><strong>{{ profile.phone|default:"—" }}</strong></p>
-          <p class="small mb-0"><span class="text-muted">Age</span><br><strong>{{ profile.age|default:"—" }}</strong></p>
+          <p class="small mb-1"><span class="text-muted">Phone</span><br><strong>{{ profile.phone|default:"N/A" }}</strong></p>
+          <p class="small mb-0"><span class="text-muted">Age</span><br><strong>{{ profile.age|default:"N/A" }}</strong></p>
         </div>
       </div>
       <div class="col-md-8">
@@ -94,7 +94,7 @@
           <div class="col-md-6">
             <label class="bx-label">Blood group</label>
             <select name="blood_group" class="form-select bx-input">
-              <option value="">— Select —</option>
+              <option value="">Select</option>
               <option value="A+" {% if profile.blood_group == "A+" %}selected{% endif %}>A+</option>
               <option value="A-" {% if profile.blood_group == "A-" %}selected{% endif %}>A-</option>
               <option value="B+" {% if profile.blood_group == "B+" %}selected{% endif %}>B+</option>
@@ -169,7 +169,7 @@
             <td>{{ v.recorded_at|date:"M d, Y H:i" }}</td>
             <td>{{ v.get_vital_type_display }}</td>
             <td><strong>{{ v.value }}</strong></td>
-            <td class="small">{{ v.note|default:"—" }}</td>
+            <td class="small">{{ v.note|default:"N/A" }}</td>
             <td>
               <form method="post" action="{% url 'users:delete_vital' v.id %}" class="d-inline">
                 {% csrf_token %}
@@ -198,7 +198,7 @@
             <td>{{ p.created_at|date:"M d, Y" }}</td>
             <td>{{ p.get_prediction_type_display }}</td>
             <td>{{ p.result }}</td>
-            <td>{{ p.probability|default:"—" }}</td>
+            <td>{{ p.probability|default:"N/A" }}</td>
           </tr>
           {% endfor %}
         </tbody>
@@ -242,9 +242,9 @@
               {% for d in donations %}
               <tr>
                 <td>{{ d.donated_at|date:"M d, Y" }}</td>
-                <td>{{ d.location|default:"—" }}</td>
+                <td>{{ d.location|default:"N/A" }}</td>
                 <td>{{ d.units }}</td>
-                <td>{{ d.recipient_note|default:"—" }}</td>
+                <td>{{ d.recipient_note|default:"N/A" }}</td>
               </tr>
               {% empty %}
               <tr><td colspan="4" class="text-center text-muted py-4">No donations logged.</td></tr>

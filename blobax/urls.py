@@ -8,6 +8,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     path('contact/', views.contact_view, name='contact'),
+    path('privacy/', views.privacy, name='privacy'),
+    path('terms/', views.terms, name='terms'),
     path('accounts/', include('allauth.urls')),
     path('users/', include('users.urls')),
     path('predictions/', include('predictions.urls')),

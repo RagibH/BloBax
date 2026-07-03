@@ -1,7 +1,9 @@
-from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
+from django.shortcuts import render
 
 from .forms import BMIPredictionForm
+from .medicine_ml import predict_medicine
 from .ml import predict_diabetes, predict_heart, predict_liver
 from .models import Prediction, PredictionHistory
 
@@ -23,6 +25,23 @@ def _save_ml_result(user, prediction_type, post_data, result):
         user=user,
         prediction_type=prediction_type,
         input_data=post_data,
+        result=result,
+    )
+
+
+def _save_medicine_result(user, result):
+    if not result or result.get('error'):
+        return
+    Prediction.objects.create(
+        user=user,
+        prediction_type='medicine',
+        result=result['label'][:100],
+        probability=result['probability'],
+    )
+    PredictionHistory.objects.create(
+        user=user,
+        prediction_type='medicine',
+        input_data={'source': 'image_classification'},
         result=result,
     )
 
@@ -105,17 +124,57 @@ def bmi_prediction(request):
 def kidney_prediction(request):
     return render(request, 'predictions/coming_soon.html', {
         'title': 'Kidney Disease Prediction',
-        'description': 'Kidney ML model coming soon.',
+        'description': 'Kidney ML model coming soon. Chronic kidney disease risk from lab markers.',
         'icon': 'fa-kidneys',
         'prediction_type': 'kidney',
     })
 
 
 @login_required
-def prescription_prediction(request):
+def skin_prediction(request):
+    return render(request, 'predictions/coming_soon.html', {
+        'title': 'Skin Disease Prediction',
+        'description': 'Skin condition analysis from images. Model integration coming soon.',
+        'icon': 'fa-hand-dots',
+        'prediction_type': 'skin',
+    })
+
+
+@login_required
+def prescription_ocr_prediction(request):
     return render(request, 'predictions/coming_soon.html', {
         'title': 'Prescription OCR',
-        'description': 'Prescription recognition coming soon.',
+        'description': 'Handwritten prescription reading and medicine extraction. Coming soon.',
         'icon': 'fa-file-prescription',
-        'prediction_type': 'prescription',
+        'prediction_type': 'prescription_ocr',
     })
+
+
+@login_required
+def lung_prediction(request):
+    return render(request, 'predictions/coming_soon.html', {
+        'title': 'Lung Disease Prediction',
+        'description': 'Respiratory condition screening model. Coming soon.',
+        'icon': 'fa-lungs',
+        'prediction_type': 'lung',
+    })
+
+
+@login_required
+def prescription_prediction(request):
+    result = None
+    if request.method == 'POST':
+        try:
+            image_file = request.FILES.get('cropped_image')
+            if not image_file:
+                result = {'error': 'Please crop the medicine area before predicting.'}
+            else:
+                result = predict_medicine(image_file)
+                _save_medicine_result(request.user, result)
+        except Exception as e:
+            result = {'error': str(e)}
+
+        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            return JsonResponse(result or {})
+
+    return render(request, 'predictions/medicine.html', {'result': result})

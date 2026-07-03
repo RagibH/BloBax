@@ -10,7 +10,7 @@
   <div class="bx-chat-sidebar">
     <div class="bx-chat-sidebar-logo">
       <img src="{% static 'images/blobax1.png' %}" width="36" alt="">
-      <span>Blobax AI</span>
+      <span>BloBax AI</span>
     </div>
     <p class="bx-chat-sidebar-hint">Ask me about symptoms, medications, diet, or your health reports.</p>
     <div class="bx-chat-topics">
@@ -31,7 +31,7 @@
       {% if not messages_list %}
       <div class="bx-chat-empty" id="chat-empty">
         <img src="{% static 'images/blobax1.png' %}" width="72" class="bx-float-slow mb-3" alt="">
-        <h4>Hi, I'm Blobax!</h4>
+        <h4>Hi, I'm BloBax!</h4>
         <p>Your personal AI health companion. Ask me anything about your health.</p>
       </div>
       {% endif %}
@@ -47,7 +47,7 @@
     <form class="bx-chat-input-bar" id="chat-form" autocomplete="off">
       {% csrf_token %}
       <input type="text" name="message" id="chat-input"
-             class="bx-chat-input" placeholder="Ask Blobax anything..." autocomplete="off" required>
+             class="bx-chat-input" placeholder="Ask BloBax anything..." autocomplete="off" required>
       <button type="submit" class="bx-chat-send" id="chat-send-btn">
         <i class="fas fa-arrow-up"></i>
       </button>

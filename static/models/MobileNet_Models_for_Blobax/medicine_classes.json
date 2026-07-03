@@ -1,0 +1,953 @@
+[
+  {
+    "medicine": "Abecab"
+  },
+  {
+    "medicine": "Abetis"
+  },
+  {
+    "medicine": "Ace"
+  },
+  {
+    "medicine": "Acifix"
+  },
+  {
+    "medicine": "Acliz"
+  },
+  {
+    "medicine": "Adovas"
+  },
+  {
+    "medicine": "Aeron"
+  },
+  {
+    "medicine": "Alben DS"
+  },
+  {
+    "medicine": "Alcet"
+  },
+  {
+    "medicine": "Algin"
+  },
+  {
+    "medicine": "Alice"
+  },
+  {
+    "medicine": "Alkanon"
+  },
+  {
+    "medicine": "Alphapress"
+  },
+  {
+    "medicine": "Amadin"
+  },
+  {
+    "medicine": "Ambrox"
+  },
+  {
+    "medicine": "Amodin"
+  },
+  {
+    "medicine": "Anaflex"
+  },
+  {
+    "medicine": "Anclog"
+  },
+  {
+    "medicine": "Anfree"
+  },
+  {
+    "medicine": "Angenta"
+  },
+  {
+    "medicine": "Angiloc"
+  },
+  {
+    "medicine": "Ardance"
+  },
+  {
+    "medicine": "Aristocort"
+  },
+  {
+    "medicine": "Arokast"
+  },
+  {
+    "medicine": "Artica"
+  },
+  {
+    "medicine": "Atova"
+  },
+  {
+    "medicine": "Atoz"
+  },
+  {
+    "medicine": "ATV"
+  },
+  {
+    "medicine": "Avas"
+  },
+  {
+    "medicine": "Avenac"
+  },
+  {
+    "medicine": "Avloclav"
+  },
+  {
+    "medicine": "Axim"
+  },
+  {
+    "medicine": "Axodin"
+  },
+  {
+    "medicine": "B126"
+  },
+  {
+    "medicine": "Barbit"
+  },
+  {
+    "medicine": "Becobion"
+  },
+  {
+    "medicine": "Becoral"
+  },
+  {
+    "medicine": "Beklo"
+  },
+  {
+    "medicine": "Betafix"
+  },
+  {
+    "medicine": "Betaloc"
+  },
+  {
+    "medicine": "Bexidal"
+  },
+  {
+    "medicine": "Bilastin"
+  },
+  {
+    "medicine": "Bilfast"
+  },
+  {
+    "medicine": "Biltin"
+  },
+  {
+    "medicine": "Bislol"
+  },
+  {
+    "medicine": "Bisopro"
+  },
+  {
+    "medicine": "Bizopan"
+  },
+  {
+    "medicine": "Bizoran"
+  },
+  {
+    "medicine": "Boni-D"
+  },
+  {
+    "medicine": "Bonigen"
+  },
+  {
+    "medicine": "Calbo"
+  },
+  {
+    "medicine": "Calboral"
+  },
+  {
+    "medicine": "Calgi-D"
+  },
+  {
+    "medicine": "Calmet-D"
+  },
+  {
+    "medicine": "Camlosart"
+  },
+  {
+    "medicine": "Carticare"
+  },
+  {
+    "medicine": "Carva"
+  },
+  {
+    "medicine": "Cefaclav"
+  },
+  {
+    "medicine": "Cephoral"
+  },
+  {
+    "medicine": "Cildip"
+  },
+  {
+    "medicine": "Citofer"
+  },
+  {
+    "medicine": "Clacef"
+  },
+  {
+    "medicine": "Clavonox"
+  },
+  {
+    "medicine": "Clavusef"
+  },
+  {
+    "medicine": "Colicon"
+  },
+  {
+    "medicine": "Cora-DX"
+  },
+  {
+    "medicine": "Coralcal"
+  },
+  {
+    "medicine": "Coralcin"
+  },
+  {
+    "medicine": "Coralex"
+  },
+  {
+    "medicine": "Coralmax"
+  },
+  {
+    "medicine": "Corsil"
+  },
+  {
+    "medicine": "Cortan"
+  },
+  {
+    "medicine": "Cosec"
+  },
+  {
+    "medicine": "Cosy"
+  },
+  {
+    "medicine": "Cotson"
+  },
+  {
+    "medicine": "DDR"
+  },
+  {
+    "medicine": "Deflacort"
+  },
+  {
+    "medicine": "Deflux"
+  },
+  {
+    "medicine": "Deleta"
+  },
+  {
+    "medicine": "Denixil"
+  },
+  {
+    "medicine": "Dexilend"
+  },
+  {
+    "medicine": "Dexlan"
+  },
+  {
+    "medicine": "Dexnova"
+  },
+  {
+    "medicine": "Dexogut"
+  },
+  {
+    "medicine": "Dicliz"
+  },
+  {
+    "medicine": "Diclogel"
+  },
+  {
+    "medicine": "Dimerol"
+  },
+  {
+    "medicine": "Disopan"
+  },
+  {
+    "medicine": "Docopa"
+  },
+  {
+    "medicine": "Domilux"
+  },
+  {
+    "medicine": "Domin"
+  },
+  {
+    "medicine": "Domiren"
+  },
+  {
+    "medicine": "Don-A"
+  },
+  {
+    "medicine": "Duo-5"
+  },
+  {
+    "medicine": "Duofix"
+  },
+  {
+    "medicine": "Duovas"
+  },
+  {
+    "medicine": "Duracef"
+  },
+  {
+    "medicine": "Ecosprin"
+  },
+  {
+    "medicine": "Edeloss"
+  },
+  {
+    "medicine": "Emistat"
+  },
+  {
+    "medicine": "Emixcef"
+  },
+  {
+    "medicine": "Epilim Chrono"
+  },
+  {
+    "medicine": "Epitra"
+  },
+  {
+    "medicine": "Escilex"
+  },
+  {
+    "medicine": "Esonix"
+  },
+  {
+    "medicine": "Esoral-M"
+  },
+  {
+    "medicine": "Esotid"
+  },
+  {
+    "medicine": "Etopride"
+  },
+  {
+    "medicine": "Etorix"
+  },
+  {
+    "medicine": "Exium"
+  },
+  {
+    "medicine": "Exor"
+  },
+  {
+    "medicine": "Famiclav"
+  },
+  {
+    "medicine": "Famodin"
+  },
+  {
+    "medicine": "Famotack"
+  },
+  {
+    "medicine": "Fast"
+  },
+  {
+    "medicine": "Febustat"
+  },
+  {
+    "medicine": "Fenadin"
+  },
+  {
+    "medicine": "Fenofex"
+  },
+  {
+    "medicine": "Ferix-V"
+  },
+  {
+    "medicine": "Fexo"
+  },
+  {
+    "medicine": "Fexofast"
+  },
+  {
+    "medicine": "Filwel gold"
+  },
+  {
+    "medicine": "Filwel silver"
+  },
+  {
+    "medicine": "Fimoxiclav"
+  },
+  {
+    "medicine": "Fixal"
+  },
+  {
+    "medicine": "Fixcef"
+  },
+  {
+    "medicine": "Flamex"
+  },
+  {
+    "medicine": "Flexi"
+  },
+  {
+    "medicine": "Flexibac"
+  },
+  {
+    "medicine": "Fliban"
+  },
+  {
+    "medicine": "Flubex"
+  },
+  {
+    "medicine": "Fluclox"
+  },
+  {
+    "medicine": "Flucloxin"
+  },
+  {
+    "medicine": "Fluver"
+  },
+  {
+    "medicine": "Folic-z"
+  },
+  {
+    "medicine": "Folimax"
+  },
+  {
+    "medicine": "Folinic"
+  },
+  {
+    "medicine": "Foly"
+  },
+  {
+    "medicine": "Folzin"
+  },
+  {
+    "medicine": "Frulac"
+  },
+  {
+    "medicine": "Fuclav"
+  },
+  {
+    "medicine": "Furotil Plus"
+  },
+  {
+    "medicine": "Fusid"
+  },
+  {
+    "medicine": "Fylox"
+  },
+  {
+    "medicine": "Gaba"
+  },
+  {
+    "medicine": "Gastrocon"
+  },
+  {
+    "medicine": "Gaviflux"
+  },
+  {
+    "medicine": "Gavilac"
+  },
+  {
+    "medicine": "Ginoba"
+  },
+  {
+    "medicine": "Glycenor"
+  },
+  {
+    "medicine": "GTN"
+  },
+  {
+    "medicine": "Hemofix"
+  },
+  {
+    "medicine": "Indever"
+  },
+  {
+    "medicine": "Ipec plus"
+  },
+  {
+    "medicine": "Itogut"
+  },
+  {
+    "medicine": "Itokine"
+  },
+  {
+    "medicine": "Itonorm"
+  },
+  {
+    "medicine": "Itopri"
+  },
+  {
+    "medicine": "Itracon"
+  },
+  {
+    "medicine": "Ivanor"
+  },
+  {
+    "medicine": "Iventi"
+  },
+  {
+    "medicine": "Kalcoral"
+  },
+  {
+    "medicine": "Kefuclav"
+  },
+  {
+    "medicine": "Kindical D"
+  },
+  {
+    "medicine": "Kiti"
+  },
+  {
+    "medicine": "Lanso-D"
+  },
+  {
+    "medicine": "Lasix"
+  },
+  {
+    "medicine": "Levostar"
+  },
+  {
+    "medicine": "Linatab"
+  },
+  {
+    "medicine": "Linax plus"
+  },
+  {
+    "medicine": "Lopirel Plus"
+  },
+  {
+    "medicine": "Loxodol"
+  },
+  {
+    "medicine": "Lumona"
+  },
+  {
+    "medicine": "M-kast"
+  },
+  {
+    "medicine": "M-Lucas"
+  },
+  {
+    "medicine": "Malifa"
+  },
+  {
+    "medicine": "Max-D"
+  },
+  {
+    "medicine": "Maxaclav"
+  },
+  {
+    "medicine": "Maxima"
+  },
+  {
+    "medicine": "Maxpro"
+  },
+  {
+    "medicine": "Maxsulin"
+  },
+  {
+    "medicine": "Mecab"
+  },
+  {
+    "medicine": "Meltix"
+  },
+  {
+    "medicine": "Menaril"
+  },
+  {
+    "medicine": "Mervan"
+  },
+  {
+    "medicine": "Methomol"
+  },
+  {
+    "medicine": "Microgest"
+  },
+  {
+    "medicine": "Mirotiv"
+  },
+  {
+    "medicine": "Mizicin"
+  },
+  {
+    "medicine": "Monas"
+  },
+  {
+    "medicine": "Monocast"
+  },
+  {
+    "medicine": "Montene"
+  },
+  {
+    "medicine": "Montril"
+  },
+  {
+    "medicine": "Motigut"
+  },
+  {
+    "medicine": "Moxibac"
+  },
+  {
+    "medicine": "Mycofree"
+  },
+  {
+    "medicine": "Myelin"
+  },
+  {
+    "medicine": "Myolax"
+  },
+  {
+    "medicine": "Nabumax"
+  },
+  {
+    "medicine": "Nabumet"
+  },
+  {
+    "medicine": "Napa Extend"
+  },
+  {
+    "medicine": "Napa Extra"
+  },
+  {
+    "medicine": "Napa One"
+  },
+  {
+    "medicine": "Naprosyn"
+  },
+  {
+    "medicine": "Naprox"
+  },
+  {
+    "medicine": "Neobion"
+  },
+  {
+    "medicine": "Nictoris"
+  },
+  {
+    "medicine": "Nitrin Sr"
+  },
+  {
+    "medicine": "Noclog"
+  },
+  {
+    "medicine": "Nomi"
+  },
+  {
+    "medicine": "Norium"
+  },
+  {
+    "medicine": "Normens"
+  },
+  {
+    "medicine": "Odmon"
+  },
+  {
+    "medicine": "Olmedip"
+  },
+  {
+    "medicine": "Olmeson"
+  },
+  {
+    "medicine": "Omidon"
+  },
+  {
+    "medicine": "Optimax"
+  },
+  {
+    "medicine": "oraf"
+  },
+  {
+    "medicine": "Orcef"
+  },
+  {
+    "medicine": "Osartil"
+  },
+  {
+    "medicine": "Ostel"
+  },
+  {
+    "medicine": "Ostocal"
+  },
+  {
+    "medicine": "Ovocal"
+  },
+  {
+    "medicine": "Oxical"
+  },
+  {
+    "medicine": "Paloron"
+  },
+  {
+    "medicine": "paloxi"
+  },
+  {
+    "medicine": "pandura"
+  },
+  {
+    "medicine": "pantonix"
+  },
+  {
+    "medicine": "paricel"
+  },
+  {
+    "medicine": "pase"
+  },
+  {
+    "medicine": "Pegalin"
+  },
+  {
+    "medicine": "pentobex"
+  },
+  {
+    "medicine": "Peritop"
+  },
+  {
+    "medicine": "Plagrin"
+  },
+  {
+    "medicine": "Povital"
+  },
+  {
+    "medicine": "Preclot"
+  },
+  {
+    "medicine": "Precodil"
+  },
+  {
+    "medicine": "Pregaba"
+  },
+  {
+    "medicine": "Pregaben"
+  },
+  {
+    "medicine": "Prelica"
+  },
+  {
+    "medicine": "Pronex"
+  },
+  {
+    "medicine": "Rabe"
+  },
+  {
+    "medicine": "Raditil"
+  },
+  {
+    "medicine": "Ranozex"
+  },
+  {
+    "medicine": "Ransys"
+  },
+  {
+    "medicine": "Rediflex Plus"
+  },
+  {
+    "medicine": "Reef"
+  },
+  {
+    "medicine": "Reefcal D"
+  },
+  {
+    "medicine": "reelife"
+  },
+  {
+    "medicine": "Renapine"
+  },
+  {
+    "medicine": "Renova"
+  },
+  {
+    "medicine": "Renovit"
+  },
+  {
+    "medicine": "Renzit"
+  },
+  {
+    "medicine": "replet"
+  },
+  {
+    "medicine": "reservix"
+  },
+  {
+    "medicine": "reset ER"
+  },
+  {
+    "medicine": "revert"
+  },
+  {
+    "medicine": "Rexiet"
+  },
+  {
+    "medicine": "Rhinil"
+  },
+  {
+    "medicine": "Ridon"
+  },
+  {
+    "medicine": "Rocal-D"
+  },
+  {
+    "medicine": "Rofixin"
+  },
+  {
+    "medicine": "Rofuclav"
+  },
+  {
+    "medicine": "Rolac"
+  },
+  {
+    "medicine": "Rolip"
+  },
+  {
+    "medicine": "Rosetor"
+  },
+  {
+    "medicine": "Rostil"
+  },
+  {
+    "medicine": "Rosu"
+  },
+  {
+    "medicine": "Rosuva"
+  },
+  {
+    "medicine": "Rovast"
+  },
+  {
+    "medicine": "Rupa"
+  },
+  {
+    "medicine": "Seacal"
+  },
+  {
+    "medicine": "Seclo"
+  },
+  {
+    "medicine": "Sergel"
+  },
+  {
+    "medicine": "Solupred"
+  },
+  {
+    "medicine": "Supra-B"
+  },
+  {
+    "medicine": "Telmitan"
+  },
+  {
+    "medicine": "Thyronor"
+  },
+  {
+    "medicine": "Thyrox"
+  },
+  {
+    "medicine": "Tofen"
+  },
+  {
+    "medicine": "Tolson"
+  },
+  {
+    "medicine": "Toramax"
+  },
+  {
+    "medicine": "Trilock"
+  },
+  {
+    "medicine": "Tufnil"
+  },
+  {
+    "medicine": "Tyclav"
+  },
+  {
+    "medicine": "Ubicare"
+  },
+  {
+    "medicine": "Vasocor"
+  },
+  {
+    "medicine": "Vave"
+  },
+  {
+    "medicine": "Vectra"
+  },
+  {
+    "medicine": "Vergon"
+  },
+  {
+    "medicine": "Vertina"
+  },
+  {
+    "medicine": "Vidalin F"
+  },
+  {
+    "medicine": "Visceralgine"
+  },
+  {
+    "medicine": "Viset"
+  },
+  {
+    "medicine": "Visral"
+  },
+  {
+    "medicine": "Vitabion"
+  },
+  {
+    "medicine": "Vonazol"
+  },
+  {
+    "medicine": "Vonocab"
+  },
+  {
+    "medicine": "Vonomax"
+  },
+  {
+    "medicine": "Wella"
+  },
+  {
+    "medicine": "Xalcort"
+  },
+  {
+    "medicine": "Xelmet"
+  },
+  {
+    "medicine": "Xelpro"
+  },
+  {
+    "medicine": "Xinc"
+  },
+  {
+    "medicine": "Xinc-B"
+  },
+  {
+    "medicine": "Xorel"
+  },
+  {
+    "medicine": "XPA XR"
+  },
+  {
+    "medicine": "Xyflo"
+  },
+  {
+    "medicine": "Xyril"
+  },
+  {
+    "medicine": "Zif-Ci"
+  },
+  {
+    "medicine": "Zimax"
+  },
+  {
+    "medicine": "Zithrin"
+  },
+  {
+    "medicine": "Zodef"
+  },
+  {
+    "medicine": "Zolium"
+  },
+  {
+    "medicine": "Zovia Gold"
+  },
+  {
+    "medicine": "Zylopen"
+  },
+  {
+    "medicine": "Zymet pro"
+  }
+]
